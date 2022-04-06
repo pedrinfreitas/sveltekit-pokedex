@@ -19,9 +19,11 @@
 
   export let pokemonDetails: RootObject;
   const types = pokemonDetails.types.map((e) => e.type.name);
-
-  console.log(types);
 </script>
+
+<svelte:head>
+  <title>Svelte kit Pokedex - {pokemonDetails.name}</title>
+</svelte:head>
 
 <h1 class="text-4xl text-center my-8 uppercase">{pokemonDetails.name}</h1>
 <div class="flex flex-col items-center">
